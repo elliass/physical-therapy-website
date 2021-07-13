@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     btn: {
-        padding: '10px',
+        padding: '.8em 2em', 
         backgroundColor: '${({ primary }) => (primary ? "red" : "green")}',
         '&:hover': {
             backgroundColor: 'white',
