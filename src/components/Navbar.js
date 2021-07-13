@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
         // backgroundColor: theme.palette.primary.main,
     },
     appbar: {
-        borderBottom: '#ecefe9 solid 1px',
         display: 'block',
         position: 'static'
     },
