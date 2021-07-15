@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles"
 // import { deepPurple } from "@material-ui/core/colors"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
-import Service from "../components/Service"
+import Services from "../components/Services"
 
 const theme = createTheme({
   palette: {
@@ -31,7 +31,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Hero />
-      <Service />
+      <Services />
     </ThemeProvider>
     </div>
 }
