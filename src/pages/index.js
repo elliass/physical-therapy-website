@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
+import Treatments from "../components/Treatments"
 
 const theme = createTheme({
   palette: {
@@ -20,6 +21,11 @@ const theme = createTheme({
       fontSize: "4rem",
       letterSpacing: '0.05em'
     },
+    h3: {
+      fontWeight: 700,
+      fontSize: "3rem",
+      letterSpacing: '0.05em'
+    },
     body1: {
       letterSpacing: '0.09em'
     }
@@ -32,6 +38,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Treatments />
     </ThemeProvider>
     </div>
 }
