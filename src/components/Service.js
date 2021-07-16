@@ -7,7 +7,7 @@ import Frame from "./Frame"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100%',
+        height: '100vh',
         margin: 'auto 0',
     },
     grid: {
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '2em 0 4em 4em',
     },
     image: {
-        border: 'solid 1px gray',
+        // border: 'solid 1px gray',
         height: '400px',
         width: '100%',
         maxWidth: '100%',
@@ -56,8 +56,7 @@ export default function Service( { service }) {
             {service.id % 2 !== 0 ? 
             <Grid className={classes.grid} container> 
                 <Grid className={classes.gridLeft} item md={5}>
-                    <div className={classes.image}></div>
-                    {/* <img  className={classes.image} src="/injured-banner.svg" alt="site banner" /> */}
+                    <img  className={classes.image} src={service.image} alt="site banner" />
                 </Grid>
 
                 <Grid item md={2}>
@@ -83,8 +82,7 @@ export default function Service( { service }) {
                 </Grid>
 
                 <Grid className={classes.gridLeft} item md={5}>
-                    <div className={classes.image}></div>
-                    {/* <img  className={classes.image} src="/injured-banner.svg" alt="site banner" /> */}
+                    <img  className={classes.image} src={service.image} alt="site banner" />
                 </Grid>
             </Grid>
             }
