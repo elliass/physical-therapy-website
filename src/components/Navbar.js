@@ -23,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         flexGrow: '1',
-        fontSize: '14px',
-        fontWeight: 'bold'
+        fontSize: '17px',
     },
     btn: {
         marginRight: '40px',

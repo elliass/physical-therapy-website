@@ -56,8 +56,8 @@ export default function Hero() {
                     Notre spécialiste se déplace jusque chez vous pour vous soigner.
                     </Typography>
                   </Container>
-                  {/* <StyledButton>Prendre Rendez-Vous</StyledButton> */}
-                  <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button>
+                  <StyledButton>Prendre Rendez-Vous</StyledButton>
+                  {/* <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button> */}
                 </Grid>
                 <Grid className={classes.gridRight} item md={6}>
                   <img  className={classes.image} src="/injured-banner.svg" alt="site banner" />

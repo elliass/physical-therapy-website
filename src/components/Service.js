@@ -32,13 +32,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         padding: '1em 0 .5em 0'
     },
-    descriptionRight: {
+    description: {
         // border: 'solid 1px black',
-        padding: '2em 4em 4em 0',
-    },
-    descriptionLeft: {
-        // border: 'solid 1px black',
-        padding: '2em 0 4em 4em',
+        padding: '2em 0em 4em 0',
+        textAlign: 'justify'
     },
     image: {
         // border: 'solid 1px gray',
@@ -66,7 +63,7 @@ export default function Service( { service }) {
                 <Grid className={classes.gridRight} item md={5}>
                     <Frame position='right'/>
                     <Typography className={classes.titleRight} variant="h3" component="h2">{service.title}</Typography>
-                    <Typography className={classes.descriptionRight} variant="body1">{service.description}</Typography>
+                    <Typography className={classes.description} variant="body1">{service.description}</Typography>
                 </Grid>
             </Grid>
             :
@@ -74,7 +71,7 @@ export default function Service( { service }) {
                 <Grid className={classes.gridRight} item md={5}>
                     <Frame position='left'/>
                     <Typography className={classes.titleLeft} variant="h3" component="h2">{service.title}</Typography>
-                    <Typography className={classes.descriptionLeft} variant="body1">{service.description}</Typography>
+                    <Typography className={classes.description} variant="body1">{service.description}</Typography>
                 </Grid>
 
                 <Grid item md={2}>
