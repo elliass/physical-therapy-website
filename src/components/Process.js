@@ -9,12 +9,11 @@ import GridListTile from '@material-ui/core/GridListTile';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import StyledButton from "./StyledButton" 
 import image from '../../static/1.svg';
 import image2 from '../../static/2.svg';
 import image3 from '../../static/3.svg';
 import image4 from '../../static/4.svg';
-import image5 from '../../static/5.svg';
-import image6 from '../../static/6.svg';
 import '../styles/global.css'
 
 const tileData = [
@@ -55,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     },
     beigeWrapper: {
         backgroundColor: theme.palette.primary.main,
+        // opacity: '.8',
         height: '500px',
     },
     header: {
@@ -83,6 +83,10 @@ const useStyles = makeStyles((theme) => ({
         // transform: 'translateZ(0)',
         margin: '0',
         maxHeight: '100%',
+        overflowX: 'scroll',
+        '&::-webkit-scrollbar': {
+            display: 'none',
+        },
     },
     gridListTile: {
         marginLeft: '10em',
@@ -122,8 +126,8 @@ const useStyles = makeStyles((theme) => ({
         // border: '3px solid #C4C4C4',
         // borderRadius: '50px',
     },
-    paragraph: {
-        marginTop: '30px',
+    description: {
+        margin: '30px 0',
         // maxWidth: '20em',
     },
     titleBar: {
@@ -147,9 +151,6 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         textAlign: 'right'
     },
-    btn: {
-        marginTop: '2em'
-    },
     outsideIcon: {
         position: 'absolute',
         top: '30px',
@@ -172,7 +173,7 @@ export default function Process() {
             </div>
             <div className={classes.darkWrapper}>
                 <div className={classes.gridContainer}>
-                    <GridList className={classes.root} cols={2} spacing={100} style={ { margin: '0', height:'100%'}}>
+                    <GridList className={classes.root} cols={2} spacing={100} style={ { margin: '0', height:'100%'}} scrollbarSize={0}>
                         {tileData.map((tile) => (
                             <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} style={ { height:'100%' }}>
                                 <Card className={classes.cardImage} elevation={0}>
@@ -190,11 +191,12 @@ export default function Process() {
                                                 <Typography variant="h4" component="h5" gutterBottom>
                                                     {tile.title}
                                                 </Typography>
-                                                <Typography className={classes.paragraph} variant="subtitle1" color="textSecondary">
+                                                <Typography className={classes.description} variant="body1" color="textSecondary">
                                                     {tile.description}
                                                 </Typography>
                                                 {tile.last &&
-                                                    <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button>
+                                                    // <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button>
+                                                    <StyledButton>Prendre Rendez-Vous</StyledButton>
                                                 }
                                             </CardContent>
                                         </div>
