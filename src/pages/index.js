@@ -7,6 +7,7 @@ import Services from "../components/Services"
 import Treatments from "../components/Treatments"
 import Process from "../components/Process"
 import Faq from "../components/Faq"
+import Form from "../components/Form"
 
 const theme = createTheme({
   palette: {
@@ -25,7 +26,17 @@ const theme = createTheme({
     },
     h3: {
       fontWeight: 700,
-      fontSize: "3rem",
+      fontSize: "2.9rem",
+      letterSpacing: '0.05em'
+    },
+    h5: {
+      fontWeight: 400,
+      fontSize: "1.5rem",
+      letterSpacing: '0.05em'
+    },
+    h6: {
+      fontWeight: 800,
+      fontSize: "1.25rem",
       letterSpacing: '0.05em'
     },
     body1: {
@@ -50,6 +61,7 @@ export default function Home() {
       <Treatments />
       <Process />
       <Faq />
+      <Form />
     </ThemeProvider>
     </div>
 }

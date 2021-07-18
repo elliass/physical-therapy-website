@@ -32,7 +32,6 @@ const questions = [
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
-        border: 'solid 1px gray',
         height: '150vh',
         position: 'relative'
     },
@@ -57,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
     },
     accordion:{
         marginTop: '150px',
-        borderWidth: '0',
         '& .MuiAccordion-root:before': {
             backgroundColor: '#FFF',
             display: 'none'
@@ -100,7 +98,7 @@ export default function Faq() {
     return (
         <div className={classes.container}>
             <div className={classes.wrapper}>
-                <Typography className={classes.title} variant="h3" component="h2" color="contrastText">QUESTIONS FREQUEMMENT POSEES</Typography>
+                <Typography className={classes.title} variant="h3" component="h2">QUESTIONS FREQUEMMENT POSEES</Typography>
                 <div className={classes.circle}></div>
 
                 <div className={classes.accordion}>

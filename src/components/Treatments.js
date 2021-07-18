@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
         right: '0',
         // display: 'flex'
     },
-
     titleContainer: {
         display: 'flex',
         maxWidth: '1160px',
@@ -111,7 +110,7 @@ export default function Treatments() {
             <div className={classes.lightContainer}></div>
             <div className={classes.beigeContainer}>
                 <div className={classes.titleContainer}>
-                    <Typography className={classes.title} variant="h3" component="h2">Nos spécialisations</Typography>
+                    <Typography className={classes.title} variant="h3" component="h2">NOS SPECIALISATIONS</Typography>
                 </div>
             </div>
             <div className={classes.blueContainer}>
