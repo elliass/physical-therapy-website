@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
         border: 'solid 1px gray',
-        height: '200vh',
+        height: '150vh',
         position: 'relative'
     },
     wrapper: {
