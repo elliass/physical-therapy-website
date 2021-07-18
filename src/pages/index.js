@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Treatments from "../components/Treatments"
+import Process from "../components/Process"
+import Faq from "../components/Faq"
 
 const theme = createTheme({
   palette: {
@@ -29,7 +31,14 @@ const theme = createTheme({
     body1: {
       letterSpacing: '0.09em'
     }
-  }
+  },
+  overrides: {
+    MuiGridList: {
+      root: {
+        margin: '0',
+      },
+    },
+  },
 })
 
 export default function Home() {
@@ -39,6 +48,8 @@ export default function Home() {
       <Hero />
       <Services />
       <Treatments />
+      <Process />
+      <Faq />
     </ThemeProvider>
     </div>
 }
