@@ -1,5 +1,5 @@
 import React from "react"
-import { createTheme, ThemeProvider } from "@material-ui/core/styles"
+import { createTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
 // import { deepPurple } from "@material-ui/core/colors"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
@@ -9,7 +9,7 @@ import Process from "../components/Process"
 import Faq from "../components/Faq"
 import Form from "../components/Form"
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: '#F2E2CD'
@@ -51,6 +51,8 @@ const theme = createTheme({
     },
   },
 })
+
+theme = responsiveFontSizes(theme)
 
 export default function Home() {
   return <div>
