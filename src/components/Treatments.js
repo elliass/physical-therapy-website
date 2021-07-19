@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#191919',
         height: '180vh',
         position: 'relative',
+
+        '@media (max-width: 959px)': {
+            height: '210vh',
+        },
     },
     whiteContainer: {
         backgroundColor: 'white',
@@ -39,6 +43,74 @@ const useStyles = makeStyles((theme) => ({
         top: '100px',
         right: '0',
         // display: 'flex'
+
+        // '@media (max-width: 1200px)': {
+        //     height: '150px',
+        // },
+    },
+    titleContainer: {
+        display: 'flex',
+        maxWidth: '1160px',
+        height: '100%',
+        margin: '0 auto',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '960px',
+        },
+        '@media (max-width: 959px)': {
+            maxWidth: '728px',
+            textAlign: 'center',
+        },
+    },
+    title: {
+        margin: 'auto 0',
+        flexGrow: '1',
+    },
+    blueContainer:{
+        // backgroundColor: 'blue',
+        position: 'absolute',
+        top: '400px',
+        maxWidth: '1160px',
+        width: '100%',
+        left: '50%',
+        transform: 'translate(-50%, 0)',
+        height: 'calc(180vh - 550px)',
+
+        '@media (max-width: 959px)': {
+            height: 'calc(210vh - 550px)',
+        },
+    },
+    grayContainer:{
+        // backgroundColor: 'gray',
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        // border: 'solid 1px red'
+
+    },
+    image: {
+        width: '100%',
+        maxWidth: '100%',
+        maxHeight: '300px',
+        margin: 'auto 0',
+        border: 'solid 1px',
+        borderColor: theme.palette.primary.main
+    },
+    grid: {
+        maxWidth: '80%',
+        margin: 'auto auto',
+        // backgroundColor: 'purple',
+        // padding: '0 10em',
+        // border: 'solid 1px red'
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '60%',
+        },
+    },
+    gridItem: {
+        // maxHeight: '300px',
+        // maxWidth: '300px',
     },
     bottomContainer: {
         backgroundColor: 'white',
@@ -51,54 +123,6 @@ const useStyles = makeStyles((theme) => ({
         right: '0',
         // display: 'flex'
     },
-    titleContainer: {
-        display: 'flex',
-        maxWidth: '1160px',
-        height: '100%',
-        margin: '0 auto',
-    },
-    title: {
-        margin: 'auto 0',
-    },
-    blueContainer:{
-        display: 'flex',
-        position: 'absolute',
-        top: '350px',
-        right: '8em',
-        maxWidth: '1160px',
-        width: '100%',
-        // height: '100%',
-        // margin: '0 auto',
-    },
-    grayContainer:{
-        // backgroundColor: 'gray',
-        position: 'absolute',
-        top: '50px',
-        // opacity: '.02',
-        width: '100%',
-        height: '650px',
-        // margin: 'auto 0',
-        display: 'flex',
-        // border: 'solid 1px red'
-
-    },
-    image: {
-        // height: '400px',
-        width: '100%',
-        maxWidth: '100%',
-        maxHeight: '300px',
-        margin: 'auto 0',
-        border: 'solid 1px',
-        borderColor: theme.palette.primary.main
-    },
-    grid: {
-        maxHeight: '100%',
-        maxWidth: '100%',
-        margin: 'auto auto',
-        padding: '0 10em',
-        // background: 'purple',
-        // border: 'solid 1px red'
-    }
 }))
 
 export default function Treatments() {
@@ -117,23 +141,23 @@ export default function Treatments() {
                 <div className={classes.grayContainer}>
                     {/* <img className={classes.image} src='/treatment1.svg' alt="site banner" /> */}
                     <Grid className={classes.grid} container spacing={3}>
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t1.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t2.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t3.svg' alt="site banner" />
                         </Grid>
                         {/* ---------------------------------------------------------------- */}
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t4.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t5.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.grid} item md={4}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
                             <img className={classes.image} src='/t6.svg' alt="site banner" />
                         </Grid>
                     </Grid>
