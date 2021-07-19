@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '90vh',
 
     '@media (max-width: 1200px)': {
-      maxWidth: '984px',
+      maxWidth: '960px',
     },
     '@media (max-width: 959px)': {
       maxWidth: '728px',
