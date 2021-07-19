@@ -17,9 +17,16 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     maxWidth: '1160px',
     margin: '0 auto',
-    // paddingTop: '13em',
     height: '100%',
     maxHeight: '90vh',
+
+    '@media (max-width: 1200px)': {
+      maxWidth: '984px',
+    },
+    '@media (max-width: 959px)': {
+      maxWidth: '728px',
+      textAlign: 'center',
+    },
   },
   gridLeft: {
     margin: 'auto 0',
@@ -29,16 +36,38 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'right',
   },
   title: {
-    paddingBottom: '50px'
+    paddingBottom: '50px',
+
+    '@media (max-width: 1200px)': {
+      fontSize: '3rem',
+    },
   },
   paragraph: {
     padding: '0 10em 4em 0',
+
+    '@media (max-width: 1200px)': {
+      padding: '0 0 4em 0',
+      margin: '0',
+      maxWidth: '400px',
+      textAlign: 'justify',
+    },
+    '@media (max-width: 959px)': {
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    },
   },
   btn: {
     padding: '.8em 2em', 
   },
   image: {
     maxWidth: '100%',
+
+    '@media (max-width: 1200px)': {
+      maxWidth: '80%',
+    },
+    '@media (max-width: 959px)': {
+      display: 'none',
+    }
   }
 }))
 
@@ -48,7 +77,7 @@ export default function Hero() {
     return (
         <div className={classes.container}>
             <Grid className={classes.grid} container> 
-                <Grid className={classes.gridLeft} item md={6}>
+                <Grid className={classes.gridLeft} item lg={6} md={6} sm={12} xs={12}>
                   <Typography className={classes.title} variant="h2" component="h1">Kinésithérapie à <br/> votre domicile</Typography>
                   <Container className={classes.paragraph}>
                     <Typography variant="body1">
@@ -59,7 +88,7 @@ export default function Hero() {
                   <StyledButton>Prendre Rendez-Vous</StyledButton>
                   {/* <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button> */}
                 </Grid>
-                <Grid className={classes.gridRight} item md={6}>
+                <Grid className={classes.gridRight} item lg={6} md={6} sm={0} xs={0}>
                   <img  className={classes.image} src="/injured-banner.svg" alt="site banner" />
                 </Grid>
             </Grid>
