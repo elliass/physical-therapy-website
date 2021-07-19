@@ -32,12 +32,24 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: 'white',
         height: '300vh',
+
+        '@media (max-width: 959px)': {
+            height: '355vh',
+        },
       },
     subContainer: {
         // border: 'solid 1px black',
         maxWidth: '1160px',
         height: '100%',
         margin: '0 auto',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '960px',
+        },
+        '@media (max-width: 959px)': {
+            maxWidth: '728px',
+            textAlign: 'center',
+        },
     },
 }))
 
