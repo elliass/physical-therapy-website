@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
         height: '130vh',
+        
     },
     beigeWrapper: {
         backgroundColor: theme.palette.primary.main,
@@ -62,7 +63,15 @@ const useStyles = makeStyles((theme) => ({
         height: '300px',
         margin: '0 auto',
         display: 'flex',
-        position: 'relative'
+        position: 'relative',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '960px',
+        },
+        '@media (max-width: 959px)': {
+          maxWidth: '728px',
+          textAlign: 'center',
+        },
     },
     title: {
         margin: 'auto 0',
@@ -91,6 +100,10 @@ const useStyles = makeStyles((theme) => ({
     gridListTile: {
         marginLeft: '10em',
         height: '100%',
+
+        '@media (max-width: 959px)': {
+            marginLeft:'5em'
+        },
     },
     cardElement: {
         // backgroundColor: 'gray',
@@ -163,6 +176,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Process() {
     const classes = useStyles()
+    const isSmall = 'true'
 
     return (
         <div className={classes.container}>
@@ -175,7 +189,8 @@ export default function Process() {
                 <div className={classes.gridContainer}>
                     <GridList className={classes.root} cols={2} spacing={100} style={ { margin: '0', height:'100%'}} scrollbarSize={0}>
                         {tileData.map((tile) => (
-                            <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} style={ { height:'100%' }}>
+                            <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} 
+                            style={ { height:'100%',width:'100%', padding:'0'} }>
                                 <Card className={classes.cardImage} elevation={0}>
                                     <CardContent>
                                         <img className={classes.image} src={tile.img} alt={tile.title} />
