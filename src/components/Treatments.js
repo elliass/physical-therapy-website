@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 959px)': {
             height: '210vh',
         },
+        '@media (max-width: 599px)': {
+            height: '310vh',
+        },
     },
     whiteContainer: {
         backgroundColor: 'white',
@@ -23,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
         height: '400px',
         top: '0',
         left: '0',
+
+        '@media (max-width: 959px)': {
+            height: '300px',
+        },
     },
     lightContainer: {
         backgroundColor: 'white',
@@ -33,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
         height: '100px',
         top: '0',
         right: '0',
+
+        '@media (max-width: 959px)': {
+            height: '75px',
+        },
     },
     beigeContainer: {
         backgroundColor: theme.palette.primary.main,
@@ -44,9 +55,10 @@ const useStyles = makeStyles((theme) => ({
         right: '0',
         // display: 'flex'
 
-        // '@media (max-width: 1200px)': {
-        //     height: '150px',
-        // },
+        '@media (max-width: 959px)': {
+            height: '150px',
+            top: '75px',
+        },
     },
     titleContainer: {
         display: 'flex',
@@ -77,11 +89,18 @@ const useStyles = makeStyles((theme) => ({
         height: 'calc(180vh - 550px)',
 
         '@media (max-width: 959px)': {
-            height: 'calc(210vh - 550px)',
+            height: 'calc(210vh - 450px)',
+            top: '300px',
         },
+        '@media (max-width: 599px)': {
+            height: 'calc(310vh - 450px)',
+        },
+
+        display: 'flex',
+
     },
     grayContainer:{
-        // backgroundColor: 'gray',
+        // backgroundColor: 'white',
         position: 'absolute',
         width: '100%',
         height: '100%',
@@ -106,6 +125,9 @@ const useStyles = makeStyles((theme) => ({
 
         '@media (max-width: 1200px)': {
             maxWidth: '60%',
+        },
+        '@media (max-width: 599px)': {
+            maxWidth: '40%',
         },
     },
     gridItem: {
@@ -141,23 +163,23 @@ export default function Treatments() {
                 <div className={classes.grayContainer}>
                     {/* <img className={classes.image} src='/treatment1.svg' alt="site banner" /> */}
                     <Grid className={classes.grid} container spacing={3}>
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t1.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t2.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t3.svg' alt="site banner" />
                         </Grid>
                         {/* ---------------------------------------------------------------- */}
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t4.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t5.svg' alt="site banner" />
                         </Grid>
-                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={6}>
+                        <Grid className={classes.gridItem} item lg={4} md={4} sm={6} xs={12}>
                             <img className={classes.image} src='/t6.svg' alt="site banner" />
                         </Grid>
                     </Grid>
