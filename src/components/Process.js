@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#191919',
         height: '130vh',
         
+        
     },
     beigeWrapper: {
         backgroundColor: theme.palette.primary.main,
@@ -75,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         margin: 'auto 0',
+        flexGrow: '1'
     },
     darkWrapper: {
         height: '100%',
@@ -96,19 +98,31 @@ const useStyles = makeStyles((theme) => ({
         '&::-webkit-scrollbar': {
             display: 'none',
         },
+
+        '@media (max-width: 959px)': {
+            margin: 'auto 0'
+        },
+        '@media (max-width: 599px)': {
+            flexDirection: 'column'
+        },
     },
     gridListTile: {
         marginLeft: '10em',
         height: '100%',
 
         '@media (max-width: 959px)': {
-            marginLeft:'5em'
+            marginLeft:'0',
         },
+        
     },
     cardElement: {
-        // backgroundColor: 'gray',
+        // border: 'solid 1px',
         height: '100%',
-        position: 'relative'
+        position: 'relative',
+
+        '@media (max-width: 959px)': {
+            margin: '0 auto',
+        },
     },
     cardList: {
         backgroundColor: 'white',
@@ -121,6 +135,19 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '2em',
         position: 'absolute',
         zIndex: '100',
+
+        '@media (max-width: 959px)': {
+            left: '50%',
+            transform: 'translate(-50%, 0)',
+            margin: '0',
+            height: '280px',
+            width: '350px',
+        }, 
+        '@media (max-width: 599px)': {
+            height: '270px',
+            width: '330px',
+            // padding: '1em 2em 3em 2em',
+        },
     },
     cardOverlay: {
         backgroundColor: 'black',
@@ -134,6 +161,19 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: '0',
         zIndex: '0',
+
+        '@media (max-width: 959px)': {
+            left: '50%',
+            transform: 'translate(-50%, 0)',
+            margin: '0',
+            height: '300px',
+            width: '350px',
+        }, 
+        '@media (max-width: 599px)': {
+            height: '285px',
+            width: '330px',
+            // padding: '1em 2em 3em 2em',
+        },
     },
     cardItem: {
         // border: '3px solid #C4C4C4',
@@ -142,6 +182,10 @@ const useStyles = makeStyles((theme) => ({
     description: {
         margin: '30px 0',
         // maxWidth: '20em',
+
+        '@media (max-width: 599px)': {
+            fontSize: '0.8em'
+        },
     },
     titleBar: {
         background:
@@ -170,7 +214,12 @@ const useStyles = makeStyles((theme) => ({
         right: '60px',
         fontSize: '100px',
         color: '#C4C4C4',
-        // opacity: '.1'
+
+        '@media (max-width: 599px)': {
+            transform: 'rotate(90deg)',
+            fontSize: '70px',
+            top: '50px'
+        },
     },
 }))
 
