@@ -16,10 +16,24 @@ const useStyles = makeStyles((theme) => ({
     wrapper: {
         maxWidth: '1160px',
         margin: '150px auto',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '960px',
+        },
+
+        '@media (max-width: 959px)': {
+            maxWidth: '728px',
+            textAlign: 'center',
+          },
+        
     },
     contact: {
         display: 'flex',
         justifyContent: 'space-between',
+
+        '@media (max-width: 959px)': {
+            flexDirection: 'column'
+        },
     },
     form: {
         maxWidth: '55%',
@@ -29,12 +43,20 @@ const useStyles = makeStyles((theme) => ({
         '& > .name': {
             margin: theme.spacing(1),
         },
+
+        '@media (max-width: 959px)': {
+            maxWidth: '100%',
+        },
     },
     image: {
         margin: 'auto 0',
         height: '400px',
         width: '100%',
         maxWidth: '40%',
+
+        '@media (max-width: 959px)': {
+            display: 'none'
+        },
     },
     img: {
         position: 'absolute',
@@ -42,6 +64,14 @@ const useStyles = makeStyles((theme) => ({
         bottom: '0',
         left: '0',
         opacity: '.7',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '40%',
+        },
+
+        '@media (max-width: 959px)': {
+            display: 'none'
+        },
     },
     title: {
         // padding: '1em 0'
@@ -52,9 +82,17 @@ const useStyles = makeStyles((theme) => ({
     first: {
         width: '48.6%',
         marginRight: theme.spacing(2),
+
+        '@media (max-width: 1200px)': {
+            width: '100%',
+        },
     },
     last: {
         width: '48.6%',
+
+        '@media (max-width: 1200px)': {
+            width: '100%',
+        },
     },
 }))
 
