@@ -33,12 +33,24 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
         height: '150vh',
-        position: 'relative'
+        position: 'relative',
+
+        '@media (max-width: 1200px)': {
+            height: '170vh',
+        },
     },
     wrapper: {
         maxWidth: '1160px',
         margin: '0 auto',
         color: '#fff',
+
+        '@media (max-width: 1200px)': {
+            maxWidth: '960px',
+        },
+        '@media (max-width: 959px)': {
+          maxWidth: '728px',
+          textAlign: 'center',
+        },
     },
     title: {
         paddingTop: '150px'
