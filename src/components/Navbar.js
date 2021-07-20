@@ -45,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
     logo: {
         flexGrow: '1',
         fontSize: '17px',
+
+        '@media (max-width: 599px)': {
+            textAlign: 'center'
+        }
     },
     navlink: {
         display: 'flex',
@@ -79,9 +83,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white',
         display: 'none',
 
-        '@media (max-width: 599px)': {
-            display: 'block',
-        }
+        // '@media (max-width: 599px)': {
+        //     display: 'block',
+        // }
     }  
 }))
 // from 576px background is breaking
