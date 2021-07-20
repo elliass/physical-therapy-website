@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 1200px)': {
             height: '170vh',
         },
+        '@media (max-width: 599px)': {
+            height: '150vh',
+        },
     },
     wrapper: {
         maxWidth: '1160px',
@@ -51,9 +54,21 @@ const useStyles = makeStyles((theme) => ({
           maxWidth: '728px',
           textAlign: 'center',
         },
+        // '@media (max-width: 599px)': {
+        //     maxWidth: '440px',
+        // },
     },
     title: {
-        paddingTop: '150px'
+        paddingTop: '150px',
+    },
+    heading: {
+        '@media (max-width: 959px)': {
+            fontSize: '1.2rem'
+        },
+        '@media (max-width: 599px)': {
+            fontSize: '1rem'
+        },
+        
     },
     circle: {
         backgroundColor: 'white',
@@ -70,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '150px',
         '& .MuiAccordion-root:before': {
             backgroundColor: '#FFF',
-            display: 'none'
+            display: 'none',
         },
         '& .MuiAccordion-root:after': {
             backgroundColor: '#FFF',
@@ -80,11 +95,26 @@ const useStyles = makeStyles((theme) => ({
             height: '2px',
             content: '""',
             opacity: '1',
-            position: 'absolute'
+            position: 'absolute',
+
+            '@media (max-width: 599px)': {
+                maxWidth: '90%',
+                margin: '0 auto'
+            },
         },
         '& .MuiAccordion-root:first-child': {
             borderTop: '0px'
-        }
+        },
+
+        '@media (max-width: 959px)': {
+            maxWidth: '700px',
+            margin: 'auto auto',
+            marginTop: '100px',
+        },
+
+        '@media (max-width: 599px)': {
+            marginTop: '50px',
+        },
     },
     accordionItem: {
         backgroundColor: 'transparent',
@@ -101,7 +131,11 @@ const useStyles = makeStyles((theme) => ({
         },
         '& .MuiSvgIcon-root': {
             fontSize: '1.5em',
-        }
+        },
+
+        '@media (max-width: 959px)': {
+            padding: '30px 0px',
+        },
     }
 }))
 export default function Faq() {
