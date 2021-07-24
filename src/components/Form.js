@@ -32,7 +32,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
 
         '@media (max-width: 959px)': {
-            flexDirection: 'column'
+            flexDirection: 'column',
+            margin: 'auto 0',
+            alignItems: 'center'
         },
     },
     form: {
@@ -45,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         },
 
         '@media (max-width: 959px)': {
-            maxWidth: '100%',
+            maxWidth: '70%',
         },
     },
     image: {
