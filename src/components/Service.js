@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
 
         '@media (max-width: 959px)': {
             textAlign: 'center',
+            paddingTop: '2em'
         },
     },
     titleLeft: {
@@ -54,6 +55,7 @@ const useStyles = makeStyles((theme) => ({
 
         '@media (max-width: 959px)': {
             textAlign: 'center',
+            paddingTop: '2em'
         },
     },
     description: {
