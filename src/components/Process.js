@@ -113,7 +113,12 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 959px)': {
             marginLeft:'0',
         },
-        
+
+        // '& .MuiGridListTile-tile': {
+        //     '@media (max-width: 599px)': {
+        //         width: '90%'
+        //     },
+        // }
     },
     cardElement: {
         // border: 'solid 1px',
@@ -144,9 +149,8 @@ const useStyles = makeStyles((theme) => ({
             width: '350px',
         }, 
         '@media (max-width: 599px)': {
-            height: '270px',
-            width: '330px',
-            // padding: '1em 2em 3em 2em',
+            height: '350px',
+            width: '70%'
         },
     },
     cardOverlay: {
@@ -170,9 +174,8 @@ const useStyles = makeStyles((theme) => ({
             width: '350px',
         }, 
         '@media (max-width: 599px)': {
-            height: '285px',
-            width: '330px',
-            // padding: '1em 2em 3em 2em',
+            height: '370px',
+            width: '70%'
         },
     },
     cardItem: {
@@ -204,10 +207,15 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'transparent',
         margin: '0em 0em -5em 8em',
         height: '11em',
-        width: '31em',
+        width: '400px',
         position: 'relative',
-        textAlign: 'right'
+        textAlign: 'right',
+        
+        '@media (max-width: 599px)': {
+            width: '70vw'
+        },
     },
+
     outsideIcon: {
         position: 'absolute',
         top: '30px',
@@ -241,7 +249,7 @@ export default function Process() {
                             <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} 
                             style={ { height:'100%',width:'100%', padding:'0'} }>
                                 <Card className={classes.cardImage} elevation={0}>
-                                    <CardContent>
+                                    <CardContent className={classes.cardContentImage}>
                                         <img className={classes.image} src={tile.img} alt={tile.title} />
                                     </CardContent>
                                 </Card>
