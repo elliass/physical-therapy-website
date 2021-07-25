@@ -7,17 +7,9 @@ import Button from '@material-ui/core/Button'
 import '../styles/global.css'
 import StyledButton from "./StyledButton" 
 
-const queries = {
-    desktop: '(max-width: 1200px)',
-    laptop: '(max-width: 1024px)',
-    tablet: '(max-width: 768px)',
-    phone: '(max-width: 480px)'
-}
-
 const useStyles = makeStyles((theme) => ({
     container: {
         flexGrow: '1',
-        // backgroundColor: theme.palette.primary.main,
     },
     appbar: {
         display: 'block',
@@ -29,18 +21,8 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '1160px',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '960px',
-        },
-        '@media (max-width: 959px)': {
-            maxWidth: '728px',
-        },
-        '@media (max-width: 599px)': {
-            maxWidth: '440px',
-        },
-        '@media (max-width: 576px)': {
-            maxWidth: '100%'
-        }
-        
+            maxWidth: '90%'
+        },        
     },
     logo: {
         flexGrow: '1',
@@ -82,13 +64,8 @@ const useStyles = makeStyles((theme) => ({
         height: '20px',
         backgroundColor: 'white',
         display: 'none',
-
-        // '@media (max-width: 599px)': {
-        //     display: 'block',
-        // }
     }  
 }))
-// from 576px background is breaking
 
 export default function Navbar() {
     const classes = useStyles()
