@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 599px)': {
             height: '310vh',
         },
+        '@media (min-width: 390px) and (max-width: 480px)': {
+            height: '350vh',
+        },
     },
     whiteContainer: {
         backgroundColor: 'white',
@@ -95,6 +98,9 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 599px)': {
             height: 'calc(310vh - 450px)',
         },
+        '@media (min-width: 390px) and (max-width: 480px)': {
+            height: 'calc(350vh - 450px)',
+        },
 
         display: 'flex',
 
@@ -129,10 +135,9 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 599px)': {
             maxWidth: '40%',
         },
-    },
-    gridItem: {
-        // maxHeight: '300px',
-        // maxWidth: '300px',
+        '@media (max-width: 480px)': {
+            maxWidth: '60%'
+        },
     },
     bottomContainer: {
         backgroundColor: 'white',
