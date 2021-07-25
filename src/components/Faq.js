@@ -38,9 +38,12 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 1200px)': {
             height: '170vh',
         },
-        '@media (max-width: 599px)': {
-            height: '150vh',
-        },
+        // '@media (max-width: 599px)': {
+        //     height: '150vh',
+        // },
+        // '@media (max-width: 480px)': {
+        //     height: '150vh',
+        // },
     },
     wrapper: {
         maxWidth: '1160px',
@@ -66,7 +69,8 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.2rem'
         },
         '@media (max-width: 599px)': {
-            fontSize: '1rem'
+            fontSize: '1rem',
+            textAlign: 'left',
         },
         
     },
