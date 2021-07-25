@@ -21,10 +21,9 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '90vh',
 
     '@media (max-width: 1200px)': {
-      maxWidth: '960px',
+      maxWidth: '90%'
     },
     '@media (max-width: 959px)': {
-      maxWidth: '728px',
       textAlign: 'center',
     },
   },
