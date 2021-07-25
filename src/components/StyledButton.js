@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: 'white',
             color: theme.palette.secondary.main,
         },
+
+        '@media (max-width: 480px)': {
+            fontSize: '11px'
+        },
     }
     
 }))
