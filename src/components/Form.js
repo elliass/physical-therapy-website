@@ -18,11 +18,9 @@ const useStyles = makeStyles((theme) => ({
         margin: '150px auto',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '960px',
+            maxWidth: '90%'
         },
-
         '@media (max-width: 959px)': {
-            maxWidth: '728px',
             textAlign: 'center',
           },
         
@@ -45,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
         '& > .name': {
             margin: theme.spacing(1),
         },
-
         '@media (max-width: 959px)': {
             maxWidth: '70%',
         },
@@ -74,9 +71,6 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 959px)': {
             display: 'none'
         },
-    },
-    title: {
-        // padding: '1em 0'
     },
     description: {
         margin: '30px 0', 
