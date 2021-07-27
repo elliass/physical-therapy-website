@@ -38,16 +38,14 @@ const useStyles = makeStyles((theme) => ({
         },
       },
     subContainer: {
-        // border: 'solid 1px black',
         maxWidth: '1160px',
         height: '100%',
         margin: '0 auto',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '960px',
+            maxWidth: '90%',
         },
         '@media (max-width: 959px)': {
-            maxWidth: '728px',
             textAlign: 'center',
         },
     },
