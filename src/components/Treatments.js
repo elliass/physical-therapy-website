@@ -56,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
         height: '200px',
         top: '100px',
         right: '0',
-        // display: 'flex'
 
         '@media (max-width: 959px)': {
             height: '150px',
@@ -106,13 +105,11 @@ const useStyles = makeStyles((theme) => ({
 
     },
     grayContainer:{
-        // backgroundColor: 'white',
+        // backgroundColor: 'gray',
         position: 'absolute',
         width: '100%',
         height: '100%',
         display: 'flex',
-        // border: 'solid 1px red'
-
     },
     image: {
         width: '100%',
@@ -125,9 +122,6 @@ const useStyles = makeStyles((theme) => ({
     grid: {
         maxWidth: '80%',
         margin: 'auto auto',
-        // backgroundColor: 'purple',
-        // padding: '0 10em',
-        // border: 'solid 1px red'
 
         '@media (max-width: 1200px)': {
             maxWidth: '60%',
@@ -148,7 +142,6 @@ const useStyles = makeStyles((theme) => ({
         height: '150px',
         bottom: '0px',
         right: '0',
-        // display: 'flex'
     },
 }))
 
