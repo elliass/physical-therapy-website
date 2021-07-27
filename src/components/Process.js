@@ -51,12 +51,9 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
         height: '130vh',
-        
-        
     },
     beigeWrapper: {
         backgroundColor: theme.palette.primary.main,
-        // opacity: '.8',
         height: '500px',
     },
     header: {
@@ -67,10 +64,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '960px',
+            maxWidth: '90%',
         },
         '@media (max-width: 959px)': {
-          maxWidth: '728px',
           textAlign: 'center',
         },
     },
@@ -113,15 +109,8 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 959px)': {
             marginLeft:'0',
         },
-
-        // '& .MuiGridListTile-tile': {
-        //     '@media (max-width: 599px)': {
-        //         width: '90%'
-        //     },
-        // }
     },
     cardElement: {
-        // border: 'solid 1px',
         height: '100%',
         position: 'relative',
 
@@ -178,13 +167,8 @@ const useStyles = makeStyles((theme) => ({
             width: '70%'
         },
     },
-    cardItem: {
-        // border: '3px solid #C4C4C4',
-        // borderRadius: '50px',
-    },
     description: {
         margin: '30px 0',
-        // maxWidth: '20em',
 
         '@media (max-width: 599px)': {
             fontSize: '0.8em'
