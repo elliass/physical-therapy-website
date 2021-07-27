@@ -38,12 +38,6 @@ const useStyles = makeStyles((theme) => ({
         '@media (max-width: 1200px)': {
             height: '170vh',
         },
-        // '@media (max-width: 599px)': {
-        //     height: '150vh',
-        // },
-        // '@media (max-width: 480px)': {
-        //     height: '150vh',
-        // },
     },
     wrapper: {
         maxWidth: '1160px',
@@ -51,15 +45,11 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '960px',
+            maxWidth: '90%'
         },
         '@media (max-width: 959px)': {
-          maxWidth: '728px',
           textAlign: 'center',
         },
-        // '@media (max-width: 599px)': {
-        //     maxWidth: '440px',
-        // },
     },
     title: {
         paddingTop: '150px',
