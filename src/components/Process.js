@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import StyledButton from "./StyledButton" 
+import List from "./List"
 import image from '../../static/1.svg';
 import image2 from '../../static/2.svg';
 import image3 from '../../static/3.svg';
@@ -50,7 +51,11 @@ const tileData = [
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
-        height: '130vh',
+        // height: '130vh',
+
+        '@media (max-width: 599px)': {
+            backgroundColor: theme.palette.primary.main,
+        },
     },
     beigeWrapper: {
         backgroundColor: theme.palette.primary.main,
@@ -74,150 +79,14 @@ const useStyles = makeStyles((theme) => ({
         margin: 'auto 0',
         flexGrow: '1'
     },
-    darkWrapper: {
-        height: '100%',
-    },
-    gridContainer: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        overflow: 'hidden',
-        height: '100vh',
-        marginTop: '-20em',
-    },
-    root: {
-        flexWrap: 'nowrap',
-        // transform: 'translateZ(0)',
-        margin: '0',
-        maxHeight: '100%',
-        overflowX: 'scroll',
-        '&::-webkit-scrollbar': {
-            display: 'none',
-        },
-
-        '@media (max-width: 959px)': {
-            margin: 'auto 0'
-        },
-        '@media (max-width: 599px)': {
-            flexDirection: 'column'
-        },
-    },
-    gridListTile: {
-        marginLeft: '10em',
-        height: '100%',
-
-        '@media (max-width: 959px)': {
-            marginLeft:'0',
-        },
-    },
-    cardElement: {
-        height: '100%',
-        position: 'relative',
-
-        '@media (max-width: 959px)': {
-            margin: '0 auto',
-        },
-    },
-    cardList: {
-        backgroundColor: 'white',
-        border: '3px solid #C4C4C4',
-        borderRadius: '50px',
-        margin: '0em 3em',
-        padding: '2em 2em',
-        height: '300px',
-        width: '400px',
-        marginRight: '2em',
-        position: 'absolute',
-        zIndex: '100',
-
-        '@media (max-width: 959px)': {
-            left: '50%',
-            transform: 'translate(-50%, 0)',
-            margin: '0',
-            height: '280px',
-            width: '350px',
-        }, 
-        '@media (max-width: 599px)': {
-            height: '350px',
-            width: '70%'
-        },
-    },
-    cardOverlay: {
-        backgroundColor: 'black',
-        border: '3px solid #C4C4C4',
-        borderRadius: '50px',
-        margin: '0em 3em',
-        padding: '2em 2em',
-        height: '320px',
-        width: '400px',
-        marginRight: '2em',
-        position: 'absolute',
-        top: '0',
-        zIndex: '0',
-
-        '@media (max-width: 959px)': {
-            left: '50%',
-            transform: 'translate(-50%, 0)',
-            margin: '0',
-            height: '300px',
-            width: '350px',
-        }, 
-        '@media (max-width: 599px)': {
-            height: '370px',
-            width: '70%'
-        },
-    },
-    description: {
-        margin: '30px 0',
-
-        '@media (max-width: 599px)': {
-            fontSize: '0.8em'
-        },
-    },
     titleBar: {
         background:
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-    },
-    icon: {
-        padding: '10px',
-        marginBottom: '1em',
-    },
-    image: {
-        width: '5em',
-        height: '5em',
-        opacity: '0.5'
-    },
-    cardImage: {
-        backgroundColor: 'transparent',
-        margin: '0em 0em -5em 8em',
-        height: '11em',
-        width: '400px',
-        position: 'relative',
-        textAlign: 'right',
-        
-        '@media (max-width: 599px)': {
-            width: '70vw'
-        },
-    },
-
-    outsideIcon: {
-        position: 'absolute',
-        top: '30px',
-        right: '60px',
-        fontSize: '100px',
-        color: '#C4C4C4',
-
-        '@media (max-width: 599px)': {
-            transform: 'rotate(90deg)',
-            fontSize: '70px',
-            top: '50px'
-        },
     },
 }))
 
 export default function Process() {
     const classes = useStyles()
-    const isSmall = 'true'
 
     return (
         <div className={classes.container}>
@@ -227,47 +96,50 @@ export default function Process() {
                 </div>
             </div>
             <div className={classes.darkWrapper}>
-                <div className={classes.gridContainer}>
-                    <GridList className={classes.root} cols={2} spacing={100} style={ { margin: '0', height:'100%'}} scrollbarSize={0}>
-                        {tileData.map((tile) => (
-                            <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} 
-                            style={ { height:'100%',width:'100%', padding:'0'} }>
-                                <Card className={classes.cardImage} elevation={0}>
-                                    <CardContent className={classes.cardContentImage}>
-                                        <img className={classes.image} src={tile.img} alt={tile.title} />
-                                    </CardContent>
-                                </Card>
-                
-                                <div className={classes.cardElement}>
-                                    <div className={classes.cardOverlay}></div>
-                                    <Card className={classes.cardList} elevation={0}>
-                                        <div className={classes.cardItem}>
-                                            <CardContent className={classes.cardContent}>
-                                                <img className={classes.icon} src={tile.icon} alt={tile.title}></img>
-                                                <Typography variant="h4" component="h5" gutterBottom>
-                                                    {tile.title}
-                                                </Typography>
-                                                <Typography className={classes.description} variant="body1" color="textSecondary">
-                                                    {tile.description}
-                                                </Typography>
-                                                {tile.last &&
-                                                    // <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button>
-                                                    <StyledButton>Prendre Rendez-Vous</StyledButton>
-                                                }
-                                            </CardContent>
-                                        </div>
-                                        {!tile.last &&
-                                        <DoubleArrowIcon className={classes.outsideIcon}></DoubleArrowIcon>
-                                        }
-                                    </Card>        
-                                </div>
-                            </GridListTile>
-                        ))}
-                    </GridList>
-                </div>
+                <List />
             </div>
         </div>
     )
 }
 
 
+
+
+// <div className={classes.gridContainer}>
+//                     <GridList className={classes.root} cols={2} spacing={100} style={ { margin: '0', height:'100%'}} scrollbarSize={0}>
+//                         {tileData.map((tile) => (
+//                             <GridListTile className={classes.gridListTile} key={tile.img} rows={2.7} 
+//                             style={ { height:'100%',width:'100%', padding:'0'} }>
+//                                 <Card className={classes.cardImage} elevation={0}>
+//                                     <CardContent className={classes.cardContentImage}>
+//                                         <img className={classes.image} src={tile.img} alt={tile.title} />
+//                                     </CardContent>
+//                                 </Card>
+                
+//                                 <div className={classes.cardElement}>
+//                                     <div className={classes.cardOverlay}></div>
+//                                     <Card className={classes.cardList} elevation={0}>
+//                                         <div className={classes.cardItem}>
+//                                             <CardContent className={classes.cardContent}>
+//                                                 <img className={classes.icon} src={tile.icon} alt={tile.title}></img>
+//                                                 <Typography variant="h4" component="h5" gutterBottom>
+//                                                     {tile.title}
+//                                                 </Typography>
+//                                                 <Typography className={classes.description} variant="body1" color="textSecondary">
+//                                                     {tile.description}
+//                                                 </Typography>
+//                                                 {tile.last &&
+//                                                     // <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button>
+//                                                     <StyledButton>Prendre Rendez-Vous</StyledButton>
+//                                                 }
+//                                             </CardContent>
+//                                         </div>
+//                                         {!tile.last &&
+//                                         <DoubleArrowIcon className={classes.outsideIcon}></DoubleArrowIcon>
+//                                         }
+//                                     </Card>        
+//                                 </div>
+//                             </GridListTile>
+//                         ))}
+//                     </GridList>
+//                 </div>
