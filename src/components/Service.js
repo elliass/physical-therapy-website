@@ -7,8 +7,9 @@ import Frame from "./Frame"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100vh',
+        height: '70vh',
         margin: 'auto 0',
+        // border: 'solid 1px black',
     },
     grid: {
         height: '100%',
