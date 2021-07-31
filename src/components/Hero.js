@@ -11,7 +11,7 @@ import StyledButton from "./StyledButton"
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: theme.palette.primary.main,
+    // backgroundColor: theme.palette.primary.dark,
     height: '100vh',
   },
   grid: {
@@ -39,6 +39,14 @@ const useStyles = makeStyles((theme) => ({
 
     '@media (max-width: 1200px)': {
       fontSize: '3rem',
+    },
+    '@media (max-width: 480px)': {
+      fontSize: '2.5rem',
+    },
+  },
+  span: {
+    '@media (max-width: 390px)': {
+      display: 'none'
     },
   },
   paragraph: {
@@ -77,7 +85,7 @@ export default function Hero() {
         <div className={classes.container}>
             <Grid className={classes.grid} container> 
                 <Grid className={classes.gridLeft} item lg={6} md={6} sm={12} xs={12}>
-                  <Typography className={classes.title} variant="h2" component="h1">Kinésithérapie à <br/> votre domicile</Typography>
+                  <Typography className={classes.title} variant="h2" component="h1">Kinésithérapie <br/> à <span className={classes.span}>votre</span> domicile</Typography>
                   <Container className={classes.paragraph}>
                     <Typography variant="body1">
                     Vous avez besoin de séances de kinésithérapie à domicile ?
