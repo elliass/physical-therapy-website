@@ -30,11 +30,10 @@ const services = [
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        backgroundColor: 'white',
-        height: '300vh',
+        // backgroundColor: 'lightgray',
+        // height: '300vh',
 
         '@media (max-width: 959px)': {
-            height: '355vh',
         },
       },
     subContainer: {
