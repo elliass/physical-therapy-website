@@ -10,7 +10,7 @@ import { FullscreenExit } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100vh',
+        // height: '100vh',
         position: 'relative',
     },
     wrapper: {
@@ -102,15 +102,14 @@ export default function Form() {
                     <div className={classes.image}>
                         <img className={classes.img} src='/mailbox.svg' alt='mailbox image' />
                     </div>
-                    <form className={classes.form} noValidate autoComplete="off">
+                    <form className={classes.form} action="POST" data-netlify="true" noValidate autoComplete="off">
                         <Typography className={classes.title} variant="h3" component="h2">ENCORE DES QUESTIONS ?</Typography>
                         <Typography className={classes.description} variant='body1'>N'hésitez pas à nous en faire part, notre spécialiste est là pour vous conseiller.</Typography>
-                        <TextField className={classes.first} label="First Name" autoComplete="none" variant="outlined"/>
-                        <TextField className={classes.last} label="Last Name" autoComplete="none" variant="outlined"/>
-                        <TextField label="Email" fullWidth autoComplete="none" variant="outlined"/>
-                        <TextField label="Message" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
-                        {/* <Button className={classes.btn} type="submit" variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Submit</Button> */}
-                        <StyledButton>Submit</StyledButton>
+                        <TextField className={classes.first} label="First Name" name="firstname" autoComplete="none" variant="outlined"/>
+                        <TextField className={classes.last} label="Last Name" name="lastname" autoComplete="none" variant="outlined"/>
+                        <TextField label="Email" name="email" fullWidth autoComplete="none" variant="outlined"/>
+                        <TextField label="Message" name="message" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
+                        <StyledButton icon={<ArrowForwardIosIcon />}>Submit</StyledButton>
                     </form>
                 </div>
             </div>
