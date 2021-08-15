@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appbar: {
         display: 'block',
-        position: 'static'
+        position: 'static',
+        backgroundColor: 'white',
     },
     toolbar: {
         margin: '0 auto',
@@ -78,9 +79,9 @@ export default function Navbar() {
                     COMPANY
                     </Typography>
                     <div className={classes.navlink}>
-                        <Button className={classes.btn} id='navlink' variant="text" size='small'>Home</Button>
+                        {/* <Button className={classes.btn} id='navlink' variant="text" size='small'>Home</Button>
                         <Button className={classes.btn} id='navlink' variant="text" size="small">Services</Button>
-                        <Button className={classes.btn} id='navlink' variant="text" size="small">Contact</Button>
+                        <Button className={classes.btn} id='navlink' variant="text" size="small">Contact</Button> */}
                         <StyledButton>Prendre RDV</StyledButton>
                     </div>
                     <div className={classes.menu}></div>
