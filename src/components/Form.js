@@ -102,7 +102,7 @@ export default function Form() {
                     <div className={classes.image}>
                         <img className={classes.img} src='/mailbox.svg' alt='mailbox image' />
                     </div>
-                    <form className={classes.form} action="POST" data-netlify="true" noValidate autoComplete="off">
+                    <form className={classes.form} name="contact" action="POST" data-netlify="true" autoComplete="off">
                         <Typography className={classes.title} variant="h3" component="h2">ENCORE DES QUESTIONS ?</Typography>
                         <Typography className={classes.description} variant='body1'>N'hésitez pas à nous en faire part, notre spécialiste est là pour vous conseiller.</Typography>
                         <TextField className={classes.first} label="First Name" name="firstname" autoComplete="none" variant="outlined"/>
