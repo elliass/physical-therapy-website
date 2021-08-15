@@ -1,6 +1,8 @@
 import React from 'react'
 import { makeStyles } from "@material-ui/core"
 import Button from '@material-ui/core/Button'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+
 
 const useStyles = makeStyles((theme) => ({
     btn: {
@@ -18,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     
 }))
 
-export default function StyledButton( { children } ) {
+export default function StyledButton( { children, icon, number, inputType } ) {
     const classes = useStyles()
 
     return (
@@ -28,8 +30,12 @@ export default function StyledButton( { children } ) {
                 variant="contained" 
                 color="secondary" 
                 size="small" 
-                disableElevation>
-                    { children }
+                disableElevation
+                endIcon={ icon }
+                href={ number }
+                type={ inputType }
+            >
+                { children }
             </Button>
         </div>
     )
