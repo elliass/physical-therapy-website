@@ -92,11 +92,13 @@ export default function Hero() {
                     Notre spécialiste se déplace jusque chez vous pour vous soigner.
                     </Typography>
                   </Container>
-                  <StyledButton>Prendre Rendez-Vous</StyledButton>
-                  {/* <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>Prendre Rendez-Vous</Button> */}
+                  {/* <StyledButton>Prendre Rendez-Vous</StyledButton> */}
+                  <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>
+                    <a href="tel:0483387762">Prendre Rendez-Vous</a>
+                  </Button>
                 </Grid>
                 <Grid className={classes.gridRight} item lg={6} md={6} sm={0} xs={0}>
-                  <img  className={classes.image} src="/injured-banner.svg" alt="site banner" />
+                  <img  className={classes.image} src="" alt="" />
                 </Grid>
             </Grid>
         </div>
