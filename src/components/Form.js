@@ -105,11 +105,12 @@ export default function Form() {
                     <form className={classes.form} name="contact" action="POST" data-netlify="true" autoComplete="off">
                         <Typography className={classes.title} variant="h3" component="h2">ENCORE DES QUESTIONS ?</Typography>
                         <Typography className={classes.description} variant='body1'>N'hésitez pas à nous en faire part, notre spécialiste est là pour vous conseiller.</Typography>
-                        <TextField className={classes.first} label="First Name" name="firstname" autoComplete="none" variant="outlined"/>
-                        <TextField className={classes.last} label="Last Name" name="lastname" autoComplete="none" variant="outlined"/>
-                        <TextField label="Email" name="email" fullWidth autoComplete="none" variant="outlined"/>
-                        <TextField label="Message" name="message" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
-                        <StyledButton icon={<ArrowForwardIosIcon />}>Submit</StyledButton>
+                        
+                        <TextField className={classes.first} label="First Name" type="text" name="firstname" autoComplete="none" variant="outlined"/>
+                        <TextField className={classes.last} label="Last Name" type="text" name="lastname" autoComplete="none" variant="outlined"/>
+                        <TextField label="Email" type="email" name="email" fullWidth autoComplete="none" variant="outlined"/>
+                        <TextField label="Message" type="text" name="message" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
+                        <StyledButton icon={<ArrowForwardIosIcon />} inputType="submit">Submit</StyledButton>
                     </form>
                 </div>
             </div>
