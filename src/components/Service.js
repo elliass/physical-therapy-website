@@ -7,9 +7,8 @@ import Frame from "./Frame"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '70vh',
+        minHeight: '100vh',
         margin: 'auto 0',
-        // border: 'solid 1px black',
     },
     grid: {
         height: '100%',
@@ -20,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridLeft: {
-        // border: 'solid 1px black',
         margin: 'auto 0',
         textAlign: 'right',
 
@@ -31,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridRight: {
-        // border: 'solid 1px black',
         margin: 'auto 0',
         position: 'relative',
 
@@ -41,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     titleRight: {
-        // border: 'solid 1px black',
         textAlign: 'justify',
         padding: '1em 0 .5em 0',
 
@@ -60,7 +56,6 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     description: {
-        // border: 'solid 1px black',
         padding: '2em 0em 4em 0',
         textAlign: 'justify',
 
@@ -71,19 +66,21 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     image: {
-        // border: 'solid 1px gray',
         height: '400px',
         width: '100%',
         maxWidth: '100%',
 
-        // '@media (max-width: 1200px)': {
-        //     maxWidth: '80%',
-        // },
         '@media (max-width: 959px)': {
             maxWidth: '45%',
             margin: '0 auto',
             height: '100%',
-        }
+        },
+        '@media (max-width: 599px)': {
+            maxWidth: '70%',
+        },
+        '@media (max-width: 480px)': {
+            maxWidth: '80%'
+        },
     }
 }))
 
