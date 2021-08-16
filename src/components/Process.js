@@ -51,14 +51,14 @@ const tileData = [
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
-        // height: '130vh',
 
         '@media (max-width: 599px)': {
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: 'white',
+            paddingBottom: '100px',
         },
     },
     beigeWrapper: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: 'white',
         height: '500px',
     },
     header: {
