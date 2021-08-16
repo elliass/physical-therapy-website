@@ -8,21 +8,21 @@ const services = [
     {
         id: 1,
         title: 'Pathologies traitées',
-        description: 'Une réeducation préventive et/ou curative vous sera proposée. Nous prenons en charge les problèmes orthopédiques (articulaire, musculaire osseux). Ainsi que les pathologies neurologiques et cardio-pulmonaires.',
+        description: 'Vous recherchez un spécialiste pour traiter votre pathologie ? Pas de problèmes nous prenons en charge la majorité des pathologies liées à l’appareil locomoteur (troubles osseux, articulaires ou musculaires) ; les problèmes cardio-respiratoires ; les problèmes liés au système nerveux.',
         image: '/body-icons.svg',
         last: false,
     },
     {
         id: 2,  
         title: 'Prise en charge',
-        description: 'Le thérapeute utilise un pannel de techniques. Les traitements seront réalisés sur base de méthodes acquises au cours de différentes spécialisations. Le principe étant de s’adapter aux différents types de patients rencontrés.',
+        description: 'Vous vous sentez plus à l’aise avec certaines méthodes de traitements ? Nous nous adaptons à vos besoins grâce aux formations et aux spécialisations acquises et aux différents types d’appareils transportables dont nous disposons ',
         image: '/physical-therapy.svg',
         last: false,
     },
     {
         id: 3,  
         title: 'En restant chez vous',
-        description: 'Notre spécialiste se déplace chez vous pour vous aider à vous remettre de vos douleureuses blessures ou à récupérer après une intervention chirurgicale.',
+        description: 'Vous ne pouvez pas vous déplacer à cause de problèmes ambulatoires ou même de locomotion ? Nous nous déplaçons à votre domicile pour effectuer vos séances de kinésithérapie.',
         image: '/home.svg',
         last: false,
     },
@@ -31,10 +31,6 @@ const services = [
 const useStyles = makeStyles((theme) => ({
     container: {
         // backgroundColor: 'lightgray',
-        // height: '300vh',
-
-        '@media (max-width: 959px)': {
-        },
       },
     subContainer: {
         maxWidth: '1160px',
