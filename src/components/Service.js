@@ -9,9 +9,11 @@ const useStyles = makeStyles((theme) => ({
     container: {
         minHeight: '100vh',
         margin: 'auto 0',
+        display: 'flex'
     },
     grid: {
         height: '100%',
+        margin: 'auto 0',
 
         '@media (max-width: 959px)': {
             display: 'flex',
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridLeft: {
-        margin: 'auto 0',
+        // margin: 'auto 0',
         textAlign: 'right',
 
         '@media (max-width: 959px)': {
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridRight: {
-        margin: 'auto 0',
+        // margin: 'auto 0',
         position: 'relative',
 
         '@media (max-width: 959px)': {
