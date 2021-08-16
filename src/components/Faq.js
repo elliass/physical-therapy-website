@@ -32,11 +32,12 @@ const questions = [
 const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#191919',
-        height: '150vh',
+        // height: '150vh',
         position: 'relative',
+        padding: '150px 0',
 
         '@media (max-width: 1200px)': {
-            height: '170vh',
+            // height: '170vh',
         },
     },
     wrapper: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     title: {
-        paddingTop: '150px',
+        // paddingTop: '150px',
     },
     heading: {
         '@media (max-width: 959px)': {
