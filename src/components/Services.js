@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import { makeStyles } from "@material-ui/core"
 import '@fontsource/roboto'
 import Service from './Service'
@@ -30,7 +29,6 @@ const services = [
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        // backgroundColor: 'lightgray',
       },
     subContainer: {
         maxWidth: '1160px',
