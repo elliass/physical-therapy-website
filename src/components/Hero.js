@@ -5,14 +5,13 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import Button from "@material-ui/core/Button";
 import StyledButton from "./StyledButton" 
 
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // backgroundColor: theme.palette.primary.dark,
-    height: '100vh',
+    // backgroundColor: 'theme.palette.primary.dark',
+    height: 'calc(100vh - 50px)',
   },
   grid: {
     maxWidth: '1160px',
@@ -92,10 +91,12 @@ export default function Hero() {
                     Notre spécialiste se déplace jusque chez vous pour vous soigner.
                     </Typography>
                   </Container>
-                  {/* <StyledButton>Prendre Rendez-Vous</StyledButton> */}
-                  <Button className={classes.btn} variant="contained" color="secondary" endIcon={<ArrowForwardIosIcon />}>
-                    <a href="tel:0483387762">Prendre Rendez-Vous</a>
-                  </Button>
+                  <StyledButton 
+                    icon={<ArrowForwardIosIcon />}
+                    number={ "tel:0483387762" }
+                  >
+                    Prendre Rendez-Vous
+                  </StyledButton>
                 </Grid>
                 <Grid className={classes.gridRight} item lg={6} md={6} sm={0} xs={0}>
                   <img  className={classes.image} src="" alt="" />
