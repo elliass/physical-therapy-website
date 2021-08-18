@@ -3,19 +3,21 @@ import { makeStyles } from "@material-ui/core"
 import '@fontsource/roboto';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import StyledButton from "./StyledButton" 
-import { FullscreenExit } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        // height: '100vh',
         position: 'relative',
+        padding: '200px 0',
+
+        '@media (max-width: 599px)': {
+            padding: '100px 0',
+        },
     },
     wrapper: {
         maxWidth: '1160px',
-        margin: '150px auto',
+        margin: '0 auto',
 
         '@media (max-width: 1200px)': {
             maxWidth: '90%'
@@ -94,24 +96,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Form() {
     const classes = useStyles()
-
-    // function encode(data) {
-    //     return Object.keys(data)
-    //         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    //         .join("&")
-    //   }
-    
-    // const handleSubmit = (event) => {
-    //   event.preventDefault()
-    //   fetch("/", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //     body: encode({
-    //       "form-name": event.target.getAttribute("name"),
-    //       ...name
-    //     })
-    //   }).then(() => navigate("/thank-you/")).catch(error => alert(error))
-    // }
 
     return (
         <div className={classes.container}>
