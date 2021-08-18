@@ -42,13 +42,21 @@ const steps = [
 const useStyles = makeStyles((theme) => ({
     container: {
         // backgroundColor: 'blue',
-        marginTop: '-20em',
+        // height: '90vh',
+        // display: 'flex',
+        marginTop: '100px',
+
+        '@media (max-width: 599px)': {
+            marginTop: '50px',
+        },
     },
     list: {
         display: 'flex',
         flexWrap: 'nowrap',
         overflowX: 'auto',
         overflowY: 'hidden',
+        // margin: 'auto 0',
+
         '&::-webkit-scrollbar': {
             display: 'none',
         },
@@ -61,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         },
     }, 
     listItem: {
-        margin: '50px',
+        margin: '0 50px',
         marginRight: '25%',
         flex: '0 0 auto',
 
