@@ -3,30 +3,18 @@ import { makeStyles } from "@material-ui/core"
 import '@fontsource/roboto'
 import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
-import { BorderColor } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        backgroundColor: '#191919',
-    },
-    lightContainer: {
         backgroundColor: 'white',
-        opacity: '.05',
-        width: '100%',
-        height: '100px',
+        padding: '200px 0',
 
-        '@media (max-width: 959px)': {
-            height: '75px',
+        '@media (max-width: 599px)': {
+            padding: '100px 0',
         },
     },
     beigeContainer: {
-        backgroundColor: 'white',
         width: '100%',
-        height: '200px',
-
-        '@media (max-width: 959px)': {
-            height: '150px',
-        },
     },
     titleContainer: {
         display: 'flex',
@@ -43,16 +31,19 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     title: {
-        margin: 'auto 0',
-        flexGrow: '1',
+        margin: 'auto auto',
     },
     blueContainer:{
         maxWidth: '1160px',
         width: '100%',
-        padding: '100px 0',
+        padding: '100px 0 0',
         // transform: 'translate(-50%, 0)',
         display: 'flex',
         margin: '0 auto',
+
+        '@media (max-width: 599px)': {
+            paddingTop: '50px',
+        },
     },
     grayContainer:{
         width: '100%',
@@ -64,8 +55,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         maxHeight: '300px',
         margin: 'auto 0',
-        border: 'solid 1px',
-        borderColor: 'white'
+        border: 'solid 2px #191919',
     },
     grid: {
         maxWidth: '80%',
@@ -94,7 +84,6 @@ export default function Treatments() {
 
     return (
         <div className={classes.container}>
-            <div className={classes.lightContainer}></div>
             <div className={classes.beigeContainer}>
                 <div className={classes.titleContainer}>
                     <Typography className={classes.title} variant="h3" component="h2">NOS SPECIALISATIONS</Typography>
@@ -124,7 +113,6 @@ export default function Treatments() {
                     </Grid>
                 </div>
             </div>
-            <div className={classes.bottomContainer}></div>
         </div>
     )
 }
