@@ -7,7 +7,8 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 const useStyles = makeStyles((theme) => ({
     btn: {
         padding: '.8em 2em', 
-        backgroundColor: '${({ primary }) => (primary ? "red" : "green")}',
+        backgroundColor: props => props.backgroundColor,
+        color: props => props.color,
         '&:hover': {
             backgroundColor: 'white',
             color: theme.palette.secondary.main,
@@ -20,20 +21,20 @@ const useStyles = makeStyles((theme) => ({
     
 }))
 
-export default function StyledButton( { children, icon, number, inputType } ) {
-    const classes = useStyles()
+export default function StyledButton( { children, ...props } ) {
+    const classes = useStyles(props)
 
     return (
         <div>
             <Button 
                 className={classes.btn} 
-                variant="contained" 
-                color="secondary" 
+                variant={ props.variant }
+                color="secondary"
                 size="small" 
                 disableElevation
-                endIcon={ icon }
-                href={ number }
-                type={ inputType }
+                endIcon={ props.icon }
+                href={ props.number }
+                type={ props.inputType }
             >
                 { children }
             </Button>
