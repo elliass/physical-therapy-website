@@ -59,7 +59,17 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1rem',
             textAlign: 'left',
         },
+    },
+    answer: {
+        paddingLeft: '60px',
         
+        '@media (max-width: 959px)': {
+            fontSize: '1rem',
+            textAlign: 'left',
+        },
+        '@media (max-width: 599px)': {
+            fontSize: '.8rem',
+        },
     },
     circle: {
         backgroundColor: 'white',
@@ -145,7 +155,7 @@ export default function Faq() {
                                 <Typography className={classes.heading} variant="h5">{question.title}</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>{question.answer}</Typography>
+                                <Typography className={classes.answer} variant="h6">{question.answer}</Typography>
                             </AccordionDetails>
                         </Accordion>
                     ))}
