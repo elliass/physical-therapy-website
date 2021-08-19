@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import Button from '@material-ui/core/Button'
+import CallIcon from '@material-ui/icons/Call';
 import '../styles/global.css'
 import StyledButton from "./StyledButton" 
 
@@ -79,10 +79,14 @@ export default function Navbar() {
                     COMPANY
                     </Typography>
                     <div className={classes.navlink}>
-                        {/* <Button className={classes.btn} id='navlink' variant="text" size='small'>Home</Button>
-                        <Button className={classes.btn} id='navlink' variant="text" size="small">Services</Button>
-                        <Button className={classes.btn} id='navlink' variant="text" size="small">Contact</Button> */}
-                        <StyledButton>Prendre RDV</StyledButton>
+                        <StyledButton 
+                            backgroundColor="#FFF" 
+                            color="#820FF0" 
+                            variant="outlined" 
+                            icon={<CallIcon />}
+                        >
+                            Appelez-nous
+                        </StyledButton>
                     </div>
                     <div className={classes.menu}></div>
                 </Toolbar>
