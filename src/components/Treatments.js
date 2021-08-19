@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: theme.palette.primary.main,
         padding: '200px 0',
 
         '@media (max-width: 599px)': {
@@ -36,8 +36,7 @@ const useStyles = makeStyles((theme) => ({
     blueContainer:{
         maxWidth: '1160px',
         width: '100%',
-        padding: '100px 0 0',
-        // transform: 'translate(-50%, 0)',
+        padding: '150px 0 0',
         display: 'flex',
         margin: '0 auto',
 
@@ -55,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         maxHeight: '300px',
         margin: 'auto 0',
-        border: 'solid 2px #191919',
     },
     grid: {
         maxWidth: '80%',
