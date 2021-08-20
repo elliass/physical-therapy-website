@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from "@material-ui/core"
 import Typography from "@material-ui/core/Typography"
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import CallIcon from '@material-ui/icons/Call';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp'
 import '../styles/global.css'
 import StyledButton from "./StyledButton" 
+import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -17,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white',
     },
     toolbar: {
+        maxWidth: '1160px',
         margin: '0 auto',
         padding: '0',
-        maxWidth: '1160px',
 
         '@media (max-width: 1200px)': {
             maxWidth: '90%'
@@ -42,34 +43,66 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column',
         }
     },
-    btn: {
-        marginRight: '40px',
-        '&:hover': {
-            backgroundColor: theme.palette.primary.main,
-            color: theme.palette.secondary.main,
-        },
-
-        '@media (max-width: 599px)': {
-            margin: '0',
-        }
-    },
-    btnPrimary: {
-        padding: '10px',
-        '&:hover': {
-            backgroundColor: 'white',
-            color: theme.palette.secondary.main,
-        },
-    },  
     menu: {
         width: '20px',
         height: '20px',
         backgroundColor: 'white',
         display: 'none',
-    }  
+    },
+    cta: {
+        position: 'relative',
+    },
+    icon: {
+        position: 'absolute',
+        fontSize: '2.5rem',
+
+        '&:hover': {
+            WebkitTransform: 'scale(1.3)',
+            MsTransform: 'scale(1.3)',
+            transform: 'scale(1.3)',
+        },
+    },
+    sitckyCta: {
+        position: 'fixed',
+        top: '500px',
+        zIndex: '100',
+        padding: '0px'
+    },
+    stickyIcon: {
+        fontSize: '3rem',
+        opacity: '.5',
+        mixBlendMode: 'difference',
+        
+        '&:hover': {
+            opacity: '1',
+        },
+    }
+
 }))
 
 export default function Navbar() {
     const classes = useStyles()
+
+    const [visible, setVisible] = useState(false)
+
+    const handleVisible = () => {
+        const scrolled = document.documentElement.scrollTop
+        if ( scrolled > 50) {
+            setVisible(true)
+        } 
+        else {
+            setVisible(false)
+        }
+    }
+
+    const handleScroll = () => {
+        window.scrollTo({ 
+            top: document.documentElement.scrollHeight, 
+            behavior: 'auto'
+        }); 
+    }
+
+    window.addEventListener('scroll', handleVisible); 
 
     return (
         <div className={classes.container}>
@@ -79,14 +112,23 @@ export default function Navbar() {
                     COMPANY
                     </Typography>
                     <div className={classes.navlink}>
-                        <StyledButton 
+                        {/* <StyledButton 
                             backgroundColor="#FFF" 
                             color="#820FF0" 
                             variant="outlined" 
-                            icon={<CallIcon />}
+                            icon={<PhoneRoundedIcon />}
                         >
                             Appelez-nous
-                        </StyledButton>
+                        </StyledButton> */}
+                        <IconButton className={classes.cta} aria-label="call us" color="secondary" href="tel:0483387762">
+                            <WhatsAppIcon className={classes.icon} color="secondary" fontSize="large"/>
+                        </IconButton>
+
+                        {visible && 
+                        <IconButton className={classes.sitckyCta} aria-label="call us" color="secondary" href="tel:0483387762" onScroll={handleScroll}>
+                            <WhatsAppIcon className={classes.stickyIcon} color="secondary" fontSize="large"/>
+                        </IconButton>}
+                        
                     </div>
                     <div className={classes.menu}></div>
                 </Toolbar>
