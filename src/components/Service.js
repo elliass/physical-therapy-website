@@ -7,9 +7,13 @@ import Frame from "./Frame"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        minHeight: '100vh',
         margin: 'auto 0',
-        display: 'flex'
+        display: 'flex',
+        padding: '200px 0',
+
+        '@media (max-width: 599px)': {
+            padding: '0px 0',
+        },
     },
     grid: {
         height: '100%',
@@ -21,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridLeft: {
-        // margin: 'auto 0',
         textAlign: 'right',
 
         '@media (max-width: 959px)': {
@@ -31,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridRight: {
-        // margin: 'auto 0',
         position: 'relative',
 
         '@media (max-width: 959px)': {
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     titleRight: {
-        textAlign: 'justify',
+        textAlign: 'left',
         padding: '1em 0 .5em 0',
 
         '@media (max-width: 959px)': {
