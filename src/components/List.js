@@ -41,9 +41,6 @@ const steps = [
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        // backgroundColor: 'blue',
-        // height: '90vh',
-        // display: 'flex',
         marginTop: '100px',
 
         '@media (max-width: 599px)': {
@@ -55,15 +52,11 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'nowrap',
         overflowX: 'auto',
         overflowY: 'hidden',
-        // margin: 'auto 0',
 
         '&::-webkit-scrollbar': {
             display: 'none',
         },
 
-        // '@media (max-width: 959px)': {
-        //     margin: 'auto 0'
-        // },
         '@media (max-width: 599px)': {
             flexDirection: 'column'
         },
@@ -75,9 +68,6 @@ const useStyles = makeStyles((theme) => ({
 
         '&:first-child': {
             marginLeft: '10%',
-        },
-        '&:last-child': {
-            margin: '50px',
         },
 
         '@media (max-width: 599px)': {
@@ -177,10 +167,10 @@ const useStyles = makeStyles((theme) => ({
     },
     outsideIcon: {
         position: 'absolute',
-        top: '40px',
+        top: '60px',
         right: '40px',
-        fontSize: '100px',
-        color: '#C4C4C4',
+        fontSize: '50px',
+        color: '#820FF0',
 
         '@media (max-width: 599px)': {
             display: 'none'
@@ -211,7 +201,7 @@ export default function List() {
                                         <Typography className={classes.description} variant="body1" color="textSecondary">
                                             {step.description}
                                         </Typography>
-                                        {step.last && <StyledButton>Prendre Rendez-Vous</StyledButton>}
+                                        {step.last && <StyledButton variant="contained">Prendre Rendez-Vous</StyledButton>}
                                     </CardContent>
                                 </div>
                                 {!step.last &&<DoubleArrowIcon className={classes.outsideIcon}></DoubleArrowIcon>}
