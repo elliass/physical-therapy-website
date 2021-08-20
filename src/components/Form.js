@@ -8,7 +8,6 @@ import StyledButton from "./StyledButton"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        position: 'relative',
         padding: '200px 0',
 
         '@media (max-width: 599px)': {
@@ -24,11 +23,11 @@ const useStyles = makeStyles((theme) => ({
         },
         '@media (max-width: 959px)': {
             textAlign: 'center',
-          },
-        
+          },  
     },
     contact: {
         display: 'flex',
+        position: 'relative',
         justifyContent: 'space-between',
 
         '@media (max-width: 959px)': {
@@ -63,13 +62,14 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         zIndex: '-10',
         bottom: '0',
-        left: '0',
-        opacity: '.7',
+        left: '-50px',
+        opacity: '.2',
+        maxWidth: '48%',
 
         '@media (max-width: 1200px)': {
-            maxWidth: '40%',
+            maxWidth: '60%',
+            left: '0px'
         },
-
         '@media (max-width: 959px)': {
             display: 'none'
         },
@@ -109,11 +109,11 @@ export default function Form() {
                         <Typography className={classes.description} variant='body1'>N'hésitez pas à nous en faire part, notre spécialiste est là pour vous conseiller.</Typography>
                         
                         <input type="hidden" name="form-name" value="contact" />
-                        <TextField className={classes.first} label="First Name" type="text" name="firstname" autoComplete="none" variant="outlined"/>
-                        <TextField className={classes.last} label="Last Name" type="text" name="lastname" autoComplete="none" variant="outlined"/>
-                        <TextField label="Email" type="email" name="email" fullWidth autoComplete="none" variant="outlined"/>
-                        <TextField label="Message" type="text" name="message" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
-                        <StyledButton icon={<ArrowForwardIosIcon />} inputType="submit">Submit</StyledButton>                    </form>
+                        <TextField className={classes.first} label="First Name" type="text" name="firstname" color="secondary" autoComplete="none" variant="outlined"/>
+                        <TextField className={classes.last} label="Last Name" type="text" name="lastname" color="secondary" autoComplete="none" variant="outlined"/>
+                        <TextField label="Email" type="email" name="email" color="secondary" fullWidth autoComplete="none" variant="outlined"/>
+                        <TextField label="Message" type="text" name="message" color="secondary" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
+                        <StyledButton icon={<ArrowForwardIosIcon />} variant="contained" inputType="submit">Submit</StyledButton>                    </form>
                 </div>
             </div>
         </div>
