@@ -29,6 +29,12 @@ const services = [
 
 const useStyles = makeStyles((theme) => ({
     container: {
+        '@media (max-width: 959px)': {
+            paddingBottom: '100px',
+        },
+        '@media (max-width: 599px)': {
+            paddingBottom: '0px',
+        },
       },
     subContainer: {
         maxWidth: '1160px',
@@ -48,7 +54,7 @@ export default function Services() {
     const classes = useStyles()
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="services">
             <div className={classes.subContainer}>
                 {services.map((service) => (
                 <Service key={service.id} service={service}/>
