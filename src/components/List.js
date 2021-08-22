@@ -201,7 +201,7 @@ export default function List() {
                                         <Typography className={classes.description} variant="body1" color="textSecondary">
                                             {step.description}
                                         </Typography>
-                                        {step.last && <StyledButton variant="contained">Prendre Rendez-Vous</StyledButton>}
+                                        {step.last && <StyledButton variant="contained" number="tel:0485765038">Prendre Rendez-Vous</StyledButton>}
                                     </CardContent>
                                 </div>
                                 {!step.last &&<DoubleArrowIcon className={classes.outsideIcon}></DoubleArrowIcon>}

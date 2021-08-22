@@ -63,14 +63,13 @@ const useStyles = makeStyles((theme) => ({
     },
     sitckyCta: {
         position: 'fixed',
-        top: '500px',
+        top: '600px',
         zIndex: '100',
         padding: '0px',
     },
     stickyIcon: {
         fontSize: '3rem',
         opacity: '.5',
-        color: '#191919',
         
         '&:hover': {
             opacity: '1',
@@ -112,12 +111,12 @@ export default function Navbar() {
                     COMPANY
                     </Typography>
                     <div className={classes.navlink}>
-                        <IconButton className={classes.cta} aria-label="call us" color="secondary" href="tel:0483387762">
+                        <IconButton className={classes.cta} aria-label="call us" color="secondary" href="tel:0485765038">
                             <WhatsAppIcon className={classes.icon} color="secondary" fontSize="large"/>
                         </IconButton>
 
                         {visible && 
-                        <IconButton className={classes.sitckyCta} aria-label="call us" color="secondary" href="tel:0483387762" onScroll={handleScroll}>
+                        <IconButton className={classes.sitckyCta} aria-label="call us" color="secondary" href="tel:0485765038" onScroll={handleScroll}>
                             <WhatsAppIcon className={classes.stickyIcon} color="secondary" fontSize="large"/>
                         </IconButton>
                         }

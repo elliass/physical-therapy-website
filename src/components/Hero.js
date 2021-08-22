@@ -107,7 +107,7 @@ export default function Hero() {
                   </Container>
                   <StyledButton 
                     icon={<ArrowForwardIosIcon />}
-                    number="tel:0483387762"
+                    number="tel:0485765038"
                     variant="contained"
                   >
                     Prendre Rendez-Vous
