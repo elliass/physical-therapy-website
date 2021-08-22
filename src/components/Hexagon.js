@@ -3,40 +3,51 @@ import { makeStyles } from "@material-ui/core"
 
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        position: 'absolute',
+        top: props => props.top,
+        left: props => props.left,
+    },
     hexagon: {
-        position: 'relative',
         width: '100px',
         height: '57.74px',
-        backgroundColor: '#F2E2CD',
-        // margin: '86.60px 0',
+        backgroundColor: props => props.color,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column', 
+        margin: 'auto 0',
     },
     before: {
-        // content: "",
-        // position: 'absolute', 
         width: '0',
         borderLeft: '50px solid transparent',
         borderRight: '50px solid transparent',
-        // bottom: '100%',
-        borderBottom: '28.87px solid #F2E2CD',
-        // borderColor: theme.palette.primary.main,
+        borderBottom: '28.87px solid',
+        borderBottomColor: props => props.color,
     },
     after: {
         width: '0',
         borderLeft: '50px solid transparent',
         borderRight: '50px solid transparent',
-        // top: '100%',
-        borderTop: '28.87px solid #F2E2CD',
-        // borderColor: theme.palette.primary.main,
+        borderTop: '28.87px solid',
+        borderTopColor: props => props.color,
+    },
+    icon: {
+        width: '50%',
     }
+
 }))
 
-export default function Hexagon() {
-    const classes = useStyles()
+export default function Hexagon( { children, ...props } ) {
+    const classes = useStyles(props)
 
     return (
-        <div>
+        <div className={classes.container} >
             <div className={classes.before} ></div>
-            <div className={classes.hexagon} ></div>
+            <div className={classes.hexagon} > 
+                <img className={classes.icon} src={ props.icon } alt= { props.alt } />
+                { children }
+            </div>
             <div className={classes.after} ></div>
         </div>
     )
