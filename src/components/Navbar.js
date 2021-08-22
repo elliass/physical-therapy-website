@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp'
 import '../styles/global.css'
-import StyledButton from "./StyledButton" 
 import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles((theme) => ({
@@ -66,18 +65,17 @@ const useStyles = makeStyles((theme) => ({
         position: 'fixed',
         top: '500px',
         zIndex: '100',
-        padding: '0px'
+        padding: '0px',
     },
     stickyIcon: {
         fontSize: '3rem',
         opacity: '.5',
-        mixBlendMode: 'difference',
+        color: '#191919',
         
         '&:hover': {
             opacity: '1',
         },
     }
-
 }))
 
 export default function Navbar() {
@@ -95,14 +93,16 @@ export default function Navbar() {
         }
     }
 
+    const isBrowser = () => typeof window !== "undefined"
+
     const handleScroll = () => {
         window.scrollTo({ 
             top: document.documentElement.scrollHeight, 
             behavior: 'auto'
         }); 
     }
-
-    window.addEventListener('scroll', handleVisible); 
+    
+    isBrowser() && window.addEventListener('scroll', handleVisible); 
 
     return (
         <div className={classes.container}>
@@ -112,14 +112,6 @@ export default function Navbar() {
                     COMPANY
                     </Typography>
                     <div className={classes.navlink}>
-                        {/* <StyledButton 
-                            backgroundColor="#FFF" 
-                            color="#820FF0" 
-                            variant="outlined" 
-                            icon={<PhoneRoundedIcon />}
-                        >
-                            Appelez-nous
-                        </StyledButton> */}
                         <IconButton className={classes.cta} aria-label="call us" color="secondary" href="tel:0483387762">
                             <WhatsAppIcon className={classes.icon} color="secondary" fontSize="large"/>
                         </IconButton>
@@ -127,7 +119,8 @@ export default function Navbar() {
                         {visible && 
                         <IconButton className={classes.sitckyCta} aria-label="call us" color="secondary" href="tel:0483387762" onScroll={handleScroll}>
                             <WhatsAppIcon className={classes.stickyIcon} color="secondary" fontSize="large"/>
-                        </IconButton>}
+                        </IconButton>
+                        }
                         
                     </div>
                     <div className={classes.menu}></div>
