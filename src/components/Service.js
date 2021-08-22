@@ -7,11 +7,11 @@ import Frame from "./Frame"
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        margin: 'auto 0',
         display: 'flex',
+        margin: 'auto 0',
         padding: '200px 0',
 
-        '@media (max-width: 599px)': {
+        '@media (max-width: 959px)': {
             padding: '0px 0',
         },
     },
