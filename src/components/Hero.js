@@ -1,16 +1,19 @@
 import React from 'react'
 import { makeStyles } from "@material-ui/core"
-import '@fontsource/roboto';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import StyledButton from "./StyledButton" 
+import '@fontsource/roboto'
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
+import Typography from "@material-ui/core/Typography"
+import Grid from "@material-ui/core/Grid"
+import Container from "@material-ui/core/Container"
+import Hexagon from "./Hexagon"
+import IconButton from '@material-ui/core/IconButton'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import StyledButton from './StyledButton'
 
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // backgroundColor: 'theme.palette.primary.dark',
+    // backgroundColor: theme.palette.primary.main,
     height: 'calc(100vh - 50px)',
   },
   grid: {
@@ -30,8 +33,14 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto 0',
   },
   gridRight: {
-    margin: 'auto 0',
-    textAlign: 'right',
+    display: 'flex',
+    margin: 'auto auto',
+    height: '400px',
+    position: 'relative',
+    
+    '@media (max-width: 959px)': {
+      display: 'none',
+    }
   },
   title: {
     paddingBottom: '50px',
@@ -65,15 +74,20 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     padding: '.8em 2em', 
   },
-  image: {
-    maxWidth: '100%',
+  hexagons: {
+    position: 'relative',
+    margin: 'auto auto',
+    height: '400px',
+    width: '400px',
+  },
+  downIcon: {
+    fontSize: '4rem',
 
-    '@media (max-width: 1200px)': {
-      maxWidth: '80%',
+    '&:hover': {
+        WebkitTransform: 'scale(1.3)',
+        MsTransform: 'scale(1.3)',
+        transform: 'scale(1.3)',
     },
-    '@media (max-width: 959px)': {
-      display: 'none',
-    }
   }
 }))
 
@@ -93,13 +107,31 @@ export default function Hero() {
                   </Container>
                   <StyledButton 
                     icon={<ArrowForwardIosIcon />}
-                    number={ "tel:0483387762" }
+                    number="tel:0483387762"
+                    variant="contained"
                   >
                     Prendre Rendez-Vous
                   </StyledButton>
                 </Grid>
                 <Grid className={classes.gridRight} item lg={6} md={6} sm={0} xs={0}>
-                  <img  className={classes.image} src="" alt="" />
+                  <div className={classes.hexagons}>
+                    <Hexagon top="0px" left="0px" color="#F2E2CD" icon="/hero/broken-bone.svg" />
+                    <Hexagon top="0px" left="120px" color="#820FF0" icon="/hero/heart.svg" />
+                    <Hexagon top="0px" left="240px" color="#F2E2CD" icon=""/>
+
+                    <Hexagon top="100px" left="60px" color="white" icon="/hero/broken-neck.svg"/>
+                    <Hexagon top="100px" left="180px" color="#F2E2CD" icon="" />
+                    <Hexagon top="100px" left="300px" color="#820FF0" icon="/hero/hospital.svg"/>
+
+                    <Hexagon top="200px" left="120px" color="#191919" icon="/hero/dumbbell.svg" />
+                    <Hexagon top="200px" left="240px" color="#F2E2CD" icon="" />
+
+                    <Hexagon top="300px" left="180px" color="white" icon="" >
+                      <IconButton className={classes.downBtn} aria-label="go to next" color="secondary" href="#services">
+                          <ExpandMoreIcon className={classes.downIcon} color="secondary" fontSize="large"/>
+                      </IconButton>
+                    </Hexagon>
+                  </div>
                 </Grid>
             </Grid>
         </div>
