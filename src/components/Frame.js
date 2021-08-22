@@ -25,7 +25,7 @@ export default function Frame({ position }) {
 
     return (
         <div>
-        {position == 'left' ? <div className={classes.left}></div> : <div className={classes.right}></div>}
+        {position === 'left' ? <div className={classes.left}></div> : <div className={classes.right}></div>}
         </div>
     )
 }
