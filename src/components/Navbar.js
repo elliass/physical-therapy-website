@@ -108,7 +108,7 @@ export default function Navbar() {
             <AppBar className={classes.appbar} elevation={0}>
                 <Toolbar className={classes.toolbar}>
                     <Typography className={classes.logo} variant="h6">
-                    COMPANY
+                    KINEHOME
                     </Typography>
                     <div className={classes.navlink}>
                         <IconButton className={classes.cta} aria-label="call us" color="secondary" href="tel:0485765038">
