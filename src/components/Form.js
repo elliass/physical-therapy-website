@@ -113,7 +113,7 @@ export default function Form() {
                         <TextField className={classes.last} label="Last Name" type="text" name="lastname" color="secondary" autoComplete="none" variant="outlined"/>
                         <TextField label="Email" type="email" name="email" color="secondary" fullWidth autoComplete="none" variant="outlined"/>
                         <TextField label="Message" type="text" name="message" color="secondary" fullWidth multiline rows={5} autoComplete="none" variant="outlined"/>
-                        <StyledButton icon={<ArrowForwardIosIcon />} variant="contained" inputType="submit">Submit</StyledButton>                    </form>
+                        <StyledButton icon={<ArrowForwardIosIcon />} variant="contained" inputType="submit">Envoyer</StyledButton>                    </form>
                 </div>
             </div>
         </div>
